@@ -1,0 +1,39 @@
+github
+   1.登录账号，创建userName.github.io命名的存储库，勾上自述文件
+   
+
+
+git客户端工具
+   如果电脑上没有装git
+   1.安装git工具
+   2.  任意目录下右键 点击git bash here，在黑窗口中输入
+	git config --global user.name "veb"
+	git config --global user.email "894299263@qq.com"
+
+如果安装了git:   
+如何让git控制本地文件(创建本地仓库)
+  1.创建目录 右键git bash here 
+  2.输入 git init 创建本地仓库
+  3.添加完新文件之后（修改文件之后）
+  4.git bash here   输入git status查看当前状态   输入  git add .  （或者拼全文件名称）    然后输入 git commit -m "操作的文字描述(例如：添加了index.html)"  至此，当前目录下文件都以被git托管
+
+
+【(  输入type.nul> .gitignore    生成忽略文件，把一些需要忽略的文件名字放入进生成的.gitignore中, 在.gitignore中，每个文件都要折行隔开，文件夹需要后面添加/  例如node_modules/ )
+
+(git版本回退 输入git log查看所有版本(conmmit就是版本ID)，输入git reset --hard 上一个版本ID)
+
+git checkout -- . 撤销修改
+】
+
+
+跟github账号建立关联
+  1.  打开git命令行窗口输入ssh-keygen -t rsa -C "214834605@qq.com"
+  2.打开administrator目录，下面有一个.ssh目录，打开此目录下id_rsa.pub文件，复制内容
+  3.进入github账号，设置，添加ssh key
+  至此，本台电脑才有资格跟github进行数据传输
+
+
+
+本地库跟远程库建立关联
+  1.在本地库目录下打开git命令行窗口 输入 git remote add origin git@github.com:yubanmeima/yubanmeima.github.io.git
+  2.传数据： 先执行 git pull origin master 然后执行 git push origin master 数据就能成功到达远程
